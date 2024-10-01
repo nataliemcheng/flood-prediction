@@ -18,9 +18,12 @@ https://www.weather.gov/documentation/services-web-api
 
 # Modeling Approach:
 We plan to model the data using a combination of machine learning techniques:
-Logistic Regression: for binary classification (flood/no flood).
+Logistic Regression: for binary classification (flood/no flood)
 
-Decision Trees: to capture complex interactions between variables such as storm intensity and wave height.
+
+Decision Trees: to capture complex interactions between variables such as storm intensity and wave height
+
+
 Deep Learning (RNNs): if the dataset supports time-series analysis to predict flood patterns based on sequences of weather data
 We plan to use numpy, matplotlib, pandas 
 
