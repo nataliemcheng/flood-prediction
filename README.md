@@ -13,31 +13,32 @@
 # Data Modeling Methods Used:
 
 1. Logistic Regression:
-We began by applying logistic regression, a basic classification model suitable for binary outcomes. Logistic regression attempts to find the best fit between the features and the binary target by estimating probabilities. This model estimates the probability of an event by fitting the data to a logistic function, enabling us to distinguish between flood and no-flood scenarios based on various predictor variables. Logistic Regression is particularly beneficial for interpretability, as it provides insight into how each feature impacts the likelihood of flooding in a given area. This approach was chosen initially to provide a baseline for more complex models. 
-After training the logistic regression model on the training set, we evaluated its performance using accuracy, precision, recall, and F1 scores. We also visualized the confusion matrix and analyzed feature importance by examining the coefficients, which indicate how each feature impacts the probability of a flood occurrence.
+- We began by applying logistic regression, a basic classification model suitable for binary outcomes. Logistic regression attempts to find the best fit between the features and the binary target by estimating probabilities. This model estimates the probability of an event by fitting the data to a logistic function, enabling us to distinguish between flood and no-flood scenarios based on various predictor variables. Logistic Regression is particularly beneficial for interpretability, as it provides insight into how each feature impacts the likelihood of flooding in a given area. This approach was chosen initially to provide a baseline for more complex models. 
+- After training the logistic regression model on the training set, we evaluated its performance using accuracy, precision, recall, and F1 scores. We also visualized the confusion matrix and analyzed feature importance by examining the coefficients, which indicate how each feature impacts the probability of a flood occurrence.
 
 2. Additional Modeling Explorations/Next Steps:
-Moving forward, attempting other models like Random Forest and Gradient Boosting could potentially improve the accuracy by capturing the more complex relationships within the data. We predict that the accuracy could improve because they do not assume linear relationships between the data like Logistic Regression. 
-We can also consider hyperparameter tuning for models like XGBoost to further explore the complex and non-linear relationships in the data. 
+- Moving forward, attempting other models like Random Forest and Gradient Boosting could potentially improve the accuracy by capturing the more complex relationships within the data. We predict that the accuracy could improve because they do not assume linear relationships between the data like Logistic Regression. 
+- We can also consider hyperparameter tuning for models like XGBoost to further explore the complex and non-linear relationships in the data. 
 
 
 # Preliminary Results:
 
 1. Logistic Regression Model:
-The logistic regression model achieved an accuracy of approximately 50%, which suggests that it was unable to capture clear patterns in the data for predicting flood occurrences or the target variable possibly has little to no linear correlation with the features. Precision and recall scores were also around 0.50, indicating that the model’s performance was close to random.
-The confusion matrix highlights our findings that the model struggled to distinguish between flood and no-flood cases effectively.
+- The logistic regression model achieved an accuracy of approximately 50%, which suggests that it was unable to capture clear patterns in the data for predicting flood occurrences or the target variable possibly has little to no linear correlation with the features. Precision and recall scores were also around 0.50, indicating that the model’s performance was close to random.
+- The confusion matrix highlights our findings that the model struggled to distinguish between flood and no-flood cases effectively.
 
 2. Feature Importance:
-Analysis of the logistic regression coefficients showed that certain features, such as water level, rainfall, and river discharge, had the most significant impact on predictions. These features align with known flood indicators, suggesting that they are important in modeling flood occurrences.
-This insight provides a basis for potential feature engineering, such as creating interaction terms (e.g., combining rainfall and water level), which could improve the model's predictive power.
+- Analysis of the logistic regression coefficients showed that certain features, such as water level, rainfall, and river discharge, had the most significant impact on predictions. These features align with known flood indicators, suggesting that they are important in modeling flood occurrences.
+- This insight provides a basis for potential feature engineering, such as creating interaction terms (e.g., combining rainfall and water level), which could improve the model's predictive power.
 
-Accuracy: The logistic regression model achieved approximately 50% accuracy, which suggests limited ability to find linear relationships in the data.
-Confusion Matrix Interpretation: Misclassifications between flood and no-flood predictions, which shows we need to improve our model, try new models, and tune hyperparameters.
+- Accuracy: The logistic regression model achieved approximately 50% accuracy, which suggests limited ability to find linear relationships in the data.
+- Confusion Matrix Interpretation: Misclassifications between flood and no-flood predictions, which shows we need to improve our model, try new models, and tune hyperparameters.
+  
 3. Next Steps for Improvement:
 The preliminary results indicate that logistic regression alone may be insufficient for this dataset, so further work could include:
-Advanced feature engineering to capture non-linear relationships.
-Trying time-series or neural network models if sequential data or temporal patterns become available.
-Potentially tuning more complex models like XGBoost or LightGBM with refined hyperparameters.
+- Advanced feature engineering to capture non-linear relationships.
+- Trying time-series or neural network models if sequential data or temporal patterns become available.
+- Potentially tuning more complex models like XGBoost or LightGBM with refined hyperparameters.
 
 ______________________________________________________________________________________________________
 # Project Proposal:
