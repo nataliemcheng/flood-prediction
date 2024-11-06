@@ -2,13 +2,13 @@
 # Data Processing:
 
 1. Data Loading and Overview: 
-   - The dataset contains various features related to environmental and demographic factors in India such as rainfall, temperature, humidity, river discharge, water level, elevation, and historical flood occurrences. The binary target variable is "Flood Occurred" (1 = flood, 0 = no flood).
+- The dataset contains various features related to environmental and demographic factors in India such as rainfall, temperature, humidity, river discharge, water level, elevation, and historical flood occurrences. The binary target variable is "Flood Occurred" (1 = flood, 0 = no flood).
 
 2. Data Encoding: 
-   - Categorical features such as “Land Cover” and “Soil Type” were one-hot encoded to convert them into numerical form, allowing the model to process these variables. One category per variable was dropped to avoid multicollinearity, resulting in dummy variables for each categorical option.
+- Categorical features such as “Land Cover” and “Soil Type” were one-hot encoded to convert them into numerical form, allowing the model to process these variables. One category per variable was dropped to avoid multicollinearity, resulting in dummy variables for each categorical option.
 
 3. Data Splitting:
-   - The processed data was split into training (70%) and testing (30%) sets to evaluate the model's performance on unseen data. By doing so, the model can learn the patterns of the data but also ensure that the model does not overfit and can generalize beyond the training set. 
+- The processed data was split into training (70%) and testing (30%) sets to evaluate the model's performance on unseen data. By doing so, the model can learn the patterns of the data but also ensure that the model does not overfit and can generalize beyond the training set. 
 
 # Data Modeling Methods Used:
 
