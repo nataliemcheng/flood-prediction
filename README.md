@@ -1,4 +1,5 @@
 # Midterm Report:
+YOUTUBE LINK: https://youtu.be/3ExyLXjNoZY
 # Data Processing:
 
 1. Data Loading and Overview: 
