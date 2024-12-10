@@ -1,3 +1,62 @@
+# Flood Prediction in South Asia: A Machine Learning Approach
+
+# How to Build and Run the Code
+
+To reproduce the results, follow the steps below:
+  1. Clone the Repository: Download or clone the repository containing the code and dataset.
+
+
+Install Dependencies: Ensure Python 3.x is installed on your system. Install all required libraries using the Makefile provided. Run the following command:
+
+ make install
+ 
+   2. This will install dependencies such as:
+      
+- pandas
+- scikit-learn
+- seaborn
+- matplotlib
+- xgboost
+- folium
+
+Run the Code: Use the following command to execute the script and generate results:
+
+ make run
+
+3. This will:
+
+- Load the dataset
+- Process and visualize the data
+- Train models (Logistic Regression, Random Forest, XGBoost)
+- Fine-tune the Logistic Regression model
+- Generate evaluation metrics and visualizations.
+
+4. Dependencies: The main libraries used in the project are listed in the requirements.txt file. To install them manually, run:
+
+ pip install -r requirements.txt
+
+5. Dataset: Ensure the dataset (flood_risk_dataset_india.csv) is in the same directory as the code. This dataset contains environmental factors such as rainfall, water levels, humidity, land cover types, and flood occurrences.
+
+# Visualizations of Data
+
+To better understand the dataset and relationships between features, the following visualizations were created:
+
+1. Feature Distributions:
+- The distributions of Water Level (m) and Rainfall (mm) were plotted, showing their variation with respect to flood occurrences.
+- These visualizations provide insights into how these features influence flood risk.
+
+2. Heatmap of Flood Probability:
+- A heatmap visualizes the combined effect of rainfall and water level bins on flood probability. It highlights critical ranges where flood risk increases.
+
+3. Flood Occurrence by Land Cover Type:
+- A bar chart was generated to explore the relationship between land cover types (e.g., urban, forest, desert) and flood occurrences.
+
+4. Geospatial Visualization:
+- An interactive map shows the geographical distribution of flood occurrences across South Asia, with clusters identifying high-risk areas.
+
+
+
+
 # Midterm Report:
 YOUTUBE LINK: https://www.youtube.com/watch?v=OuV1QngPClg
 # Data Processing:
