@@ -4,11 +4,27 @@ import pytest
 import pandas as pd
 from flood_risk_model import preprocess_data, feature_selection, train_logistic_regression, evaluate_model
 
-def test_preprocess_data():
-    # Mock file path or create a small test dataframe for testing
-    X_resampled, y_resampled = preprocess_data('test_data.csv')
-    assert X_resampled.shape[0] == y_resampled.shape[0]
-    assert len(X_resampled.columns) > 0
+# Mocking the CSV File Reading
+def test_preprocess_data(tmpdir):
+    # Create a temporary CSV file
+    test_csv = tmpdir.join("test_data.csv")
+    
+    # Create a mock DataFrame to save to the CSV file
+    mock_data = pd.DataFrame({
+        'feature1': [1, 2, 3],
+        'feature2': [4, 5, 6],
+        'target': [0, 1, 0]
+    })
+    
+    # Save the DataFrame to the temporary file
+    mock_data.to_csv(test_csv, index=False)
+    
+    # Now call your function with the path to the temporary file
+    X_resampled, y_resampled = preprocess_data(str(test_csv))
+    
+    # Add assertions based on expected behavior
+    assert X_resampled.shape == (2, 2)  # Adjust based on expected behavior
+    assert y_resampled.shape == (2,)  # Adjust based on expected behavior
 
 def test_feature_selection():
     X_resampled = pd.DataFrame({
