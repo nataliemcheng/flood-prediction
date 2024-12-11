@@ -25,8 +25,8 @@ def preprocess_data(file_path):
 
     return X_resampled, y_resampled
 
-def feature_selection(X_resampled, y_resampled):
-    rfe = RFE(estimator=LogisticRegression(max_iter=1000), n_features_to_select=10)
+def feature_selection(X_resampled, y_resampled, n_features=10):
+    rfe = RFE(estimator=LogisticRegression(max_iter=1000), n_features_to_select=n_features)
     X_selected = rfe.fit_transform(X_resampled, y_resampled)
     
     selected_features = X_resampled.columns[rfe.support_]
