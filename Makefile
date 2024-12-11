@@ -1,8 +1,6 @@
-# Makefile for automating Python notebook tasks
-
 # Variables
-NOTEBOOK=your_notebook.ipynb
-ENV_NAME=your_virtual_env
+NOTEBOOK=Flood_Prediction_FINAL.ipynb
+ENV_NAME=env
 REQUIREMENTS=requirements.txt
 
 # Targets
@@ -18,16 +16,16 @@ install:
 
 # Run the notebook
 run:
-	jupyter nbconvert --to notebook --execute $(NOTEBOOK)
+	$(ENV_NAME)/bin/jupyter nbconvert --to notebook --execute $(NOTEBOOK)
 
 # Convert notebook to HTML
 convert:
-	jupyter nbconvert --to html $(NOTEBOOK)
+	$(ENV_NAME)/bin/jupyter nbconvert --to html $(NOTEBOOK)
 
 # Convert notebook to PDF (requires additional tools like LaTeX)
 convert-pdf:
-	jupyter nbconvert --to pdf $(NOTEBOOK)
+	$(ENV_NAME)/bin/jupyter nbconvert --to pdf $(NOTEBOOK)
 
 # Clean up the generated files and virtual environment
 clean:
-	rm -rf $(ENV_NAME) $(NOTEBOOK).nbconvert
+	rm -rf $(ENV_NAME) $(NOTEBOOK).nbconvert $(NOTEBOOK).html $(NOTEBOOK).pdf
