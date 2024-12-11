@@ -31,6 +31,8 @@ Run the Code: Use the following command to execute the script and generate resul
 - Fine-tune the Logistic Regression model
 - Generate evaluation metrics and visualizations.
 
+Then either use one of the following commands "make convert" or "make convert-pdf" in order exporting the notebook as an HTML or PDF file
+
 4. Dependencies: The main libraries used in the project are listed in the requirements.txt file. To install them manually, run:
 
  pip install -r requirements.txt
