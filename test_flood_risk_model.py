@@ -9,11 +9,13 @@ def test_preprocess_data(tmpdir):
     # Create a temporary CSV file
     test_csv = tmpdir.join("test_data.csv")
     
-    # Create a mock DataFrame to save to the CSV file
+    # Create a mock DataFrame with 'Land Cover' and 'Soil Type' columns
     mock_data = pd.DataFrame({
         'feature1': [1, 2, 3],
         'feature2': [4, 5, 6],
-        'target': [0, 1, 0]
+        'target': [0, 1, 0],
+        'Land Cover': ['forest', 'desert', 'grassland'],
+        'Soil Type': ['clay', 'sand', 'loam']
     })
     
     # Save the DataFrame to the temporary file
@@ -23,7 +25,7 @@ def test_preprocess_data(tmpdir):
     X_resampled, y_resampled = preprocess_data(str(test_csv))
     
     # Add assertions based on expected behavior
-    assert X_resampled.shape == (2, 2)  # Adjust based on expected behavior
+    assert X_resampled.shape == (2, 4)  # Adjust based on expected behavior
     assert y_resampled.shape == (2,)  # Adjust based on expected behavior
 
 def test_feature_selection():
